@@ -134,7 +134,7 @@ PLATFORMS
 
 DEPENDENCIES
   jquery-middleman
-  middleman (~> 3.3.3)
+  middleman
   middleman-favicon-maker
   middleman-livereload
   oj
