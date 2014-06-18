@@ -12,3 +12,11 @@ gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
 
 # Windows does not come with time zone data
 gem "tzinfo-data", platforms: [:mswin, :mingw]
+
+gem "rack-contrib"
+gem "puma"
+
+gem "jquery-middleman"
+
+gem 'therubyracer' # faster JS compiles
+gem 'oj' # faster JS compiles
