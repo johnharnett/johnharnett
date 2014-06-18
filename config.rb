@@ -73,7 +73,7 @@ configure :build do
   # set :http_prefix, "/Content/images/"
 
   activate :favicon_maker, :icons => {
-      "_favicon_template.png" => [
+      "images/_favicon_template.png" => [
           { icon: "apple-touch-icon-152x152-precomposed.png" },
           { icon: "apple-touch-icon-114x114-precomposed.png" },
           { icon: "apple-touch-icon-72x72-precomposed.png" },
