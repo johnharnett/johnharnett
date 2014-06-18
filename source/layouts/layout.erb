@@ -9,13 +9,20 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "The Middleman" %></title>
 
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png" />
-    <link rel="shortcut icon" href="favicon.png" />
-    <link rel="icon" type="image/ico" href="favicon.ico" />
+    <!-- Standby old school ico favicon, works in every browser -->
+    <%= favicon_tag "/favicon.ico" %>
+    <!-- Supported since iOS 1 (and some Android devices), this icon will be rounded, dropshadowed, and reflective shined -->
+    <%= favicon_tag "/apple-touch-icon.png", :rel => "apple-touch-icon", :type => "image/png" %>
+    <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+    <%= favicon_tag "/apple-touch-icon-precomposed.png", :rel => "apple-touch-icon-precomposed", :type => "image/png" %>
+    <!-- For non-Retina iPhone and iPod Touch: -->
+    <%= favicon_tag "/apple-touch-icon-57x57-precomposed.png", :rel => "apple-touch-icon-precomposed", :sizes => "57x57", :type => "image/png" %>
+    <!-- For first- and second-generation iPad: -->
+    <%= favicon_tag "/apple-touch-icon-72x72-precomposed.png", :rel => "apple-touch-icon-precomposed", :sizes => "72x72", :type => "image/png" %>
+    <!-- For iPhone with high-resolution Retina display: -->
+    <%= favicon_tag "/apple-touch-icon-114x114-precomposed.png", :rel => "apple-touch-icon-precomposed", :sizes => "114x114", :type => "image/png" %>
+    <!-- 144x144 missing For iPad 3+ (with Retina Display) -->
+
 
     <%= stylesheet_link_tag "all" %>
     <%= javascript_include_tag  "all" %>
