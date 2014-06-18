@@ -10,8 +10,6 @@
   margin-bottom: 40px;
 }
 #logo-image {
-  $cardShadow: 3px 3px 16px 0px rgba(0, 0, 0, 0.6);
-
   position: absolute;
   background: url("../images/logo.png") no-repeat center;
   width: 120px;
@@ -23,6 +21,6 @@
   padding: 12px;
   background-color: white;
 
-  @include box-shadow($cardShadow);
+  @include box-shadow($logoShadow);
 
 }
