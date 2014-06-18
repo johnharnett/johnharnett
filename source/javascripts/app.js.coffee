@@ -6,7 +6,7 @@ class Coffee.AppHelper
   setupLogoHover: () =>
     $("#logo-image").hover(
       ->
-        $(this).transition(scale: 1.1, duration: 100)
+        $(this).transition(scale: 1.1, duration: 120)
       ->
         $(this).transition(scale: 1, duration: 500)
     )
