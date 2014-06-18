@@ -40,8 +40,6 @@ configure :development do
   activate :livereload
 end
 
-page "/404.html", :layout => false
-
 # Methods defined in the helpers block are available in templates
 # helpers do
 #   def some_helper
