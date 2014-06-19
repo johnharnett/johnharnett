@@ -1,6 +1,6 @@
 class Coffee.AppHelper
   constructor: () ->
-    this.mainPage = $("#logo-image")
+    @aboutButton = $("#about-button");
 
     this._setupLogoHover()
     this._setupAboutButton()
@@ -15,12 +15,12 @@ class Coffee.AppHelper
     )
 
   _setupAboutButton: () =>
-    $("#about-button").click ->
-      $(this).transition(scale: 2, duration: 120)
+    @aboutButton.click =>
+      @aboutButton.transition(scale: 2, duration: 120)
       .transition(
         scale: 1
         duration: 500
-        complete: ->
+        complete: =>
           # fade in team page
           $('#team-page').css(display: "block")
           $('#team-page').transition(opacity: 1, duration: 500)
@@ -29,20 +29,31 @@ class Coffee.AppHelper
           $('#main-page').transition(
             opacity: 0
             duration: 500
-            complete: ->
+            complete: =>
               $('#main-page').css(display: "none")
 
-              history.pushState
-                plate_id: 2
-                plate: "team"
-              , null, "/page/team.html"
+              this._pushState('team')
           )
       )
 
   _setupPushState: () =>
     window.onpopstate = (event) ->
       if event.state
-        content = event.state.plate
-        console.log(content)
+        page = event.state.page
 
-      document.location.reload()
+        if page == 'main'
+          document.location.reload()
+        else if page == 'team'
+          document.location.reload()
+      else
+        # main page doesn't have an event.state.page
+        document.location.reload()
+
+  _pushState: (page) ->
+    path = "/page/#{page}.html"
+
+    console.log(path)
+
+    history.pushState
+      page: page
+    , null, "/page/#{page}.html"
