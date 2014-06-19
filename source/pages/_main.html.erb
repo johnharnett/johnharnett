@@ -1,4 +1,17 @@
-<div id="main-page">
+
+<%
+   class_name = 'page-visible'
+
+   if defined?(hidden)
+     if hidden == 'yes'
+       class_name = 'page-hidden'
+       puts(hidden)
+
+     end
+   end
+%>
+
+<div id="main-page" class=<%= class_name %>>
 
   <div id="header-image">
 
@@ -23,7 +36,6 @@
   <a target="_blank" href="https://twitter.com/DistantFutureSF">Twitter</a>
   <br/>
   <a target="_blank" href="http://www.facebook.com/DistantFuture?ref=hl&bookmark_t=page">Facebook</a>
-
 
   <%= partial "pages/footer" %>
 

@@ -61,9 +61,6 @@ h1 {
   left: 0;
   bottom: 0;
   right: 0;
-
-  opacity: 1;
-  display: block;
 }
 
 #team-page {
@@ -72,7 +69,15 @@ h1 {
   left: 0;
   bottom: 0;
   right: 0;
+}
 
+.page-hidden {
   opacity: 0;
   display: none;
+}
+
+.page-visible {
+  opacity: 1;
+  display: block;
+
 }

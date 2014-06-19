@@ -1,6 +1,28 @@
-<div id="team-page">
+
+<%
+   class_name = 'page-visible'
+
+   if defined?(hidden)
+     if hidden == 'yes'
+       class_name = 'page-hidden'
+       puts(hidden)
+
+     end
+   end
+%>
+
+<div id="team-page" class=<%= class_name %>>
 
   <h1>Team</h1>
+
+
+  <ul>
+    <li><a onclick="burger()">Burger</a></li>
+    <li><a onclick="sandwich()">Sandwich</a></li>
+    <li><a onclick="fries()">Fries</a></li>
+  </ul>
+  <div id="chosen-plate">None</div>
+
   <%= partial "pages/footer" %>
 
 </div>
