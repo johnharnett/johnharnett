@@ -80,6 +80,11 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 
+  # Compress PNGs after build
+  # First: gem install middleman-smusher
+  require "middleman-smusher"
+  activate :smusher
+
   activate :favicon_maker, :icons => {
       "images/_favicon_template.png" => [
           { icon: "apple-touch-icon-152x152-precomposed.png" },
