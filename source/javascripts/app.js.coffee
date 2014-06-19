@@ -21,19 +21,7 @@ class Coffee.AppHelper
         scale: 1
         duration: 500
         complete: =>
-          # fade in team page
-          $('#team-page').css(display: "block")
-          $('#team-page').transition(opacity: 1, duration: 500)
-
-          # fade out main
-          $('#main-page').transition(
-            opacity: 0
-            duration: 500
-            complete: =>
-              $('#main-page').css(display: "none")
-
-              this._pushState('team')
-          )
+          this._switchPages()
       )
 
   _setupPushState: () =>
@@ -57,3 +45,18 @@ class Coffee.AppHelper
     history.pushState
       page: page
     , null, "/page/#{page}.html"
+
+  _switchPages: () =>
+    # fade in team page
+    $('#team-page').css(display: "block")
+    $('#team-page').transition(opacity: 1, duration: 500)
+
+    # fade out main
+    $('#main-page').transition(
+      opacity: 0
+      duration: 500
+      complete: =>
+        $('#main-page').css(display: "none")
+
+        this._pushState('team')
+    )
