@@ -40,11 +40,9 @@ class Coffee.AppHelper
   _pushState: (page) ->
     path = "/page/#{page}.html"
 
-    console.log(path)
-
     history.pushState
       page: page
-    , null, "/page/#{page}.html"
+    , null, path
 
   _switchPages: () =>
     # fade in team page
