@@ -4,6 +4,7 @@ class Coffee.AppHelper
 
     this._setupLogoHover()
     this._setupAboutButton()
+    this._setupPushState()
 
   _setupLogoHover: () =>
     $("#logo-image").hover(
@@ -38,4 +39,10 @@ class Coffee.AppHelper
           )
       )
 
+  _setupPushState: () =>
+    window.onpopstate = (event) ->
+      if event.state
+        content = event.state.plate
+        console.log(content)
 
+      document.location.reload()
