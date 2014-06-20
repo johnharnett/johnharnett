@@ -1,0 +1,8 @@
+@include keyframes(my-animation) {
+  0%, 100% {
+    background-color: blue;
+  }
+  50% {
+    background-color: red;
+  }
+}
