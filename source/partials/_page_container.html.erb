@@ -1,0 +1,26 @@
+---
+title: Distant Future Technologies
+---
+ <%
+    $display_page = 'main'
+
+    if defined?($savedPageName)
+      $display_page = $savedPageName
+    end
+
+    def page_class(page)
+      return 'page-visible' if $display_page == page
+
+      return 'page-hidden'
+    end
+ %>
+
+<%= partial "partials/navbar", {locals: {page_name: page_name}} %>
+
+<div id="page-container">
+  <%= partial "pages/main", {locals: {class_name: page_class('main')}} %>
+  <%= partial "pages/team", {locals: {class_name: page_class('team')}} %>
+  <%= partial "pages/contact", {locals: {class_name: page_class('contact')}} %>
+  <%= partial "pages/portfolio", {locals: {class_name: page_class('portfolio')}} %>
+  <%= partial "pages/about", {locals: {class_name: page_class('about')}} %>
+</div>

@@ -1,18 +1,8 @@
 
-<%
-   class_name = 'page-visible'
-
-   if defined?(hidden)
-     if hidden == 'yes'
-       class_name = 'page-hidden'
-     end
-   end
-%>
-
 <div id="team-page" class=<%= class_name %>>
 
   <h1>Team</h1>
 
-  <%= partial "pages/footer" %>
+  <%= partial "partials/footer" %>
 
 </div>

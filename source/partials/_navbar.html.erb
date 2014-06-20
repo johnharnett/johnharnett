@@ -1,0 +1,26 @@
+
+<%
+   $display_page = 'main'
+
+   if defined?(page_name)
+     $display_page = page_name
+   end
+
+   def li_class(page)
+     return 'active' if $display_page == page
+
+     return 'not-active'
+   end
+%>
+
+<% # http://cssmenumaker.com/menu/simple-responsive-menu %>
+
+<div id='cssmenu'>
+  <ul>
+    <li class=<%= li_class('main') %>><a href='/'><span>Home</span></a></li>
+    <li class=<%= li_class('portfolio') %>><a href='/'><span>Portfolio</span></a></li>
+    <li class=<%= li_class('team') %>><a href='/'><span>Team</span></a></li>
+    <li class=<%= li_class('about') %>><a href='/'><span>About</span></a></li>
+    <li class="last <%= li_class('contact') %>"><a href='/'><span>Contact</span></a></li>
+  </ul>
+</div>
