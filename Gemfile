@@ -22,5 +22,7 @@ gem 'therubyracer' # faster JS compiles
 gem 'oj' # faster JS compiles
 
 # Make a favicon from one big base image
-gem "middleman-favicon-maker"
+gem 'middleman-favicon-maker'
 gem 'middleman-smusher'
+
+gem 'animation'

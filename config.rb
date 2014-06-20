@@ -28,13 +28,13 @@
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
 #  :which_fake_page => "Rendering a fake page with a local variable" }
 
-
-
 # works with pushstate urls so refresh and saving bookmarks work
 ["main", "team", "portfolio", "about", "contact"].each do |page|
   proxy "/page/#{page}.html", '/pages_template.html', :locals => { :page_name => page }, :ignore => true
 end
 
+# https://github.com/ericam/compass-animation
+require "animation"
 
 ###
 # Helpers
