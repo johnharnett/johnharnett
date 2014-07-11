@@ -1,0 +1,97 @@
+// Util.css - random utility classes and mixins that don't belong elsewhere
+
+@import "compass/css3";
+@import "compass/utilities/general/clearfix";
+
+//-------- Mixins -----------
+@mixin center($elmWidth: $pageWidth) {
+  width: $elmWidth;
+  left: 50%;
+  margin-left: -$elmWidth/2;
+}
+
+@mixin rollover {
+  @include transition(all 1s ease);
+  &:hover {
+    opacity: 0.0;
+  }
+}
+
+@mixin socialHover {
+  @include transition(all 0.5s ease);
+  &:hover {
+    color: $amoebaGreenMedium;
+  }
+}
+
+@mixin breakpoint($point) {
+  @if $point == desktop {
+    @media (max-width: 1600px) { @content; }
+  }
+  @else if $point == tablet {
+    @media (max-width: 910px) { @content; }
+  }
+  @else if $point == mobile {
+    @media (max-width: 760px)  { @content; }
+  }
+}
+
+
+@mixin animate-all($duration: 1s) {
+  @include transition(all $duration ease-in-out);
+}
+
+//-------- Extensions --------
+%mobileOnly {
+  display: none;
+
+  @include breakpoint(mobile) {
+    display: inline;
+  }
+}
+
+//-------- Classes ----------- 
+.hidden {
+  display: none;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.geo-medium {
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.vertical-center {
+  @include inline-block;
+  height: inherit;
+  &:before {
+    content: "";
+    @include inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+  &:after {
+    content: "";
+    @include inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+}
+
+.clearfix {
+  @include clearfix;
+}
+
+// Mobile-only styles
+.mobile {
+  @extend %mobileOnly;
+}
