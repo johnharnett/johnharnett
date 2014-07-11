@@ -21,7 +21,7 @@
                 %>
 
                 <div class="back-image" style="background-image: url(<%=image_path%>.jpg); background-repeat: no-repeat; background-size: cover; background-position: center;"></div>
-            <% end %>
+          <% end %>
           </div>
           <h1><%= person.name %></h1>
 
@@ -30,6 +30,8 @@
           <% person.bio.each do |pgraph| %>
               <p><%= pgraph %></p>
           <% end %>
+
+          <p><%= 7.sentences %></p>
 
           <% if person.facebook.present? %>
               <a href="http://facebook.com/<%= person.facebook %>" target="_blank"><i class="fa fa-facebook-square fa-lg"></i></a>

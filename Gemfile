@@ -27,3 +27,4 @@ gem 'middleman-smusher'
 
 gem 'animation'
 gem 'font-awesome-middleman'
+gem "ipsum"

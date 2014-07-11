@@ -42,6 +42,17 @@ GEM
     http_parser.rb (0.6.0)
     httpclient (2.3.3)
     i18n (0.6.9)
+    ipsum (2.0.0)
+      ipsum-english (>= 1.1.0)
+      ipsum-french (>= 1.1.0)
+      ipsum-latin (>= 1.1.0)
+    ipsum-core (2.0.0)
+    ipsum-english (1.1.0)
+      ipsum-core (>= 2.0.0)
+    ipsum-french (1.1.0)
+      ipsum-core (>= 2.0.0)
+    ipsum-latin (1.1.0)
+      ipsum-core (>= 2.0.0)
     jquery-middleman (3.0.4)
       thor (>= 0.14, < 2.0)
     json (1.8.1)
@@ -149,6 +160,7 @@ PLATFORMS
 DEPENDENCIES
   animation
   font-awesome-middleman
+  ipsum
   jquery-middleman
   middleman
   middleman-favicon-maker
