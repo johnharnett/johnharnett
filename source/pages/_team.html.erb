@@ -13,7 +13,14 @@
           >
             <% if image_exists?("team/#{short_name}") %>
                 <!--<%= image_tag "team/#{short_name}.jpg", :alt => "#{short_name.capitalize}'s picture" %>-->
-                <div class="back-image" style="background-image: url(/images/team/<%=short_name%>.jpg); background-repeat: no-repeat; background-size: cover; background-position: center;"></div>
+
+                <%
+                   file = "team/#{short_name}"
+
+                    image_path = File.join("/", images_dir, file)
+                %>
+
+                <div class="back-image" style="background-image: url(<%=image_path%>.jpg); background-repeat: no-repeat; background-size: cover; background-position: center;"></div>
             <% end %>
           </div>
           <h1><%= person.name %></h1>
