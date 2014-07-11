@@ -26,3 +26,4 @@ gem 'middleman-favicon-maker'
 gem 'middleman-smusher'
 
 gem 'animation'
+gem 'font-awesome-middleman'

@@ -31,6 +31,8 @@ GEM
     favicon_maker (1.3)
       docile (~> 1.1)
     ffi (1.9.3)
+    font-awesome-middleman (4.1.1)
+      middleman-core (>= 3.0.0)
     fssm (0.2.10)
     haml (4.0.5)
       tilt
@@ -146,6 +148,7 @@ PLATFORMS
 
 DEPENDENCIES
   animation
+  font-awesome-middleman
   jquery-middleman
   middleman
   middleman-favicon-maker

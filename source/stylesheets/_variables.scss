@@ -4,10 +4,10 @@ $navColor: #eb9b3a;
 // Configure Compass:
 $experimental-support-for-svg: true;
 
-$amoebaGreen: #A6CC2F;
-$amoebaGreenMedium: #8BA400;
-$amoebaGreenDark: #384F0E;
-$amoebaGrey: #EAEBED;
-$greenUltraDark: #002C1F;
-$greyLight: #BEC0C6;
+$baseColor: rgba(0,0,0,1);
+$baseColorMedium: rgba(0,0,0,.6);
+$baseColorDark: rgba(0,0,0,.7);
+$baseColorGray: rgba(0,0,0,.5);
+$baseColorUltraDark: rgba(0,0,0,1);
+$greyLight: rgba(0,0,0,.4);
 $pageWidth: 845px;

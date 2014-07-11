@@ -1,5 +1,8 @@
 #team {
-  top: 60px;
+  background-color: rgba(255,255,255,1);
+  margin: 22px auto;
+  padding: 60px;
+  max-width: 1000px;
 
   @include breakpoint(mobile) {
     top: -40px;
@@ -22,27 +25,8 @@
 
   }
 
-  hr#topOfPage {
-    margin-bottom: -10px;
-
-    @include breakpoint(mobile) {
-      margin-top: -50px;
-    }
-  }
-
-  hr#bottomOfPage {
-    margin-bottom: 10px;
-
-    @include breakpoint(tablet) {
-      margin-bottom: 40px;
-    }
-    @include breakpoint(mobile) {
-      margin-top: 15px;
-    }
-  }
-
   h2 {
-    color: $amoebaGreenDark;
+    color: $baseColorDark;
     font-size: 24px;
     margin-bottom: 25px;
 
@@ -55,14 +39,12 @@
       padding: 0 7px;
       font-size: 16px;
     }
-
-    hr {
-      margin-bottom: 10px;
-    }
-
   }
 
   .team-member {
+    background-color: rgba(0,0,0,.2);
+    padding: 20px;
+
     @include clearfix;
     margin-top: 40px;
 
@@ -86,7 +68,7 @@
     h2 {
       margin-top: -10px;
       font-size: 36px;
-      color: $amoebaGreenDark;
+      color: $baseColorDark;
 
       @include breakpoint(tablet) {
         padding: 0 20px;
@@ -125,6 +107,7 @@
 
     p {
       font-size: 14px;
+      text-align: left;
 
       @include breakpoint(tablet) {
         padding: 0 25px;
@@ -138,7 +121,7 @@
     .team-member-image {
       width: 375px;
       height: 375px;
-      background-color: $amoebaGreen;
+      background-color: $baseColor;
       box-shadow: 1px 2px 5px;
       margin-bottom: 10px;
 
