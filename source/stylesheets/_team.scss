@@ -1,16 +1,20 @@
 #team {
-  background-color: rgba(255,255,255,1);
+  background-color: rgba(255, 255, 255, 1);
   margin: 22px auto;
   padding: 60px;
   max-width: 1000px;
+  @include border-radius(23px);
+  text-align: left;
 
   @include breakpoint(mobile) {
+    text-align: center;
     top: -40px;
   }
 
   h1, h2 {
     text-align: center;
   }
+
   h1 {
     font-size: 80px;
     margin-bottom: -12px;
@@ -22,7 +26,6 @@
       font-size: 42px;
       margin-bottom: 50px;
     }
-
   }
 
   h2 {
@@ -42,7 +45,8 @@
   }
 
   .team-member {
-    background-color: rgba(0,0,0,.2);
+    background-color: rgba(0, 0, 0, .1);
+    @include border-radius(23px);
     padding: 20px;
 
     @include clearfix;
@@ -77,15 +81,14 @@
       @include breakpoint(mobile) {
         text-align: center;
       }
-
     }
 
     i {
       @include socialHover;
 
-      font-size: 36px;
+      font-size: 30px;
       line-height: 36px;
-      padding-right: 15px;
+      padding-right: 8px;
 
       @include breakpoint(mobile) {
         text-align: center;
@@ -121,7 +124,6 @@
     .team-member-image {
       width: 375px;
       height: 375px;
-      background-color: $baseColor;
       box-shadow: 1px 2px 5px;
       margin-bottom: 10px;
 
@@ -131,7 +133,6 @@
         height: 250px;
         padding-bottom: 50px;
       }
-
 
       &.right {
         float: right;
@@ -163,10 +164,14 @@
         }
       }
 
+      .back-image {
+        width: 100%;
+        height: 100%;
+      }
       img {
         @include breakpoint(mobile) {
           width: 300px;
-          height: 300px; //TODO: Why does the <img> have a height of 300 while the container is 250?
+          height: 300px;
         }
       }
     }

@@ -3,10 +3,6 @@
 
   <div id="team">
 
-    <h2>
-      Meet our global team of experts.
-    </h2>
-
     <% data.team.each do |short_name, person| %>
         <div class="team-member">
           <div
@@ -16,7 +12,8 @@
           <% end %>
           >
             <% if image_exists?("team/#{short_name}") %>
-                <%= image_tag "team/#{short_name}.jpg", :alt => "#{short_name.capitalize}'s picture" %>
+                <!--<%= image_tag "team/#{short_name}.jpg", :alt => "#{short_name.capitalize}'s picture" %>-->
+                <div class="back-image" style="background-image: url(/images/team/<%=short_name%>.jpg); background-repeat: no-repeat; background-size: cover; background-position: center;"></div>
             <% end %>
           </div>
           <h1><%= person.name %></h1>
