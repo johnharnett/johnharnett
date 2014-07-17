@@ -28,10 +28,10 @@ steve:
 
 danny:
   name: Danny Saad
-  title: Marketing
+  title: Founder
   extra_image_style: "margin-top: 10px;"
   bio:
-    - "Danny is an markeging guru living in San Francisco."
+    - "Danny is an entrepreneur living in San Francisco."
 
 dragan:
   name: Dragan Milic
