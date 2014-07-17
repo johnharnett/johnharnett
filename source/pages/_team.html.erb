@@ -12,8 +12,6 @@
           <% end %>
           >
             <% if image_exists?("team/#{short_name}") %>
-                <!--<%= image_tag "team/#{short_name}.jpg", :alt => "#{short_name.capitalize}'s picture" %>-->
-
                 <%
                    file = "team/#{short_name}"
 
@@ -52,7 +50,6 @@
     <% end %>
 
   </div>
-
 
   <%= partial "partials/footer" %>
 
