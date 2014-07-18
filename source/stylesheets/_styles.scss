@@ -60,7 +60,8 @@ p.max {
   bottom: 0;
   right: 0;
   opacity: 0;
-  top: 40px;
+  top: 20px;
+  @include translateZ(0,0);
 }
 
 .page-base {
