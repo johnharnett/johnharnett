@@ -18,6 +18,11 @@ h1 {
   margin: 0;
 }
 
+p.max {
+  margin: auto;
+  max-width: 600px;
+}
+
 #header-image {
   position: relative;
   background: url("../images/spacestation.jpg") no-repeat;
