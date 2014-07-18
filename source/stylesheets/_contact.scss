@@ -1,4 +1,11 @@
 #contact-page {
+  .contact-table {
+    display: table;
+    margin: auto;
+  }
+  span {
+    display: table-cell;
+  }
   i {
     margin-bottom: 22px;
     font-size: 52px;
