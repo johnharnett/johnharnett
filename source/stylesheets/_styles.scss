@@ -54,29 +54,21 @@ p.max {
   position: relative;
 }
 
-#main-page {
+@mixin base {
   position: absolute;
-  top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-}
-
-#team-page {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-}
-
-.page-hidden {
   opacity: 0;
+  top: 40px;
+}
+
+.page-base {
+  @include base;
   display: none;
 }
 
 .page-visible {
-  opacity: 1;
-  display: block;
-
+  @include base;
 }
+
