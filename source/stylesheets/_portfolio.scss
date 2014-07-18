@@ -9,7 +9,7 @@
     padding: 12px;
     display: block;
     max-width: 200px;
-    background-color: rgba(1,133,0,.2);
+    background-color: $navColor;
     @include border-radius(12px);
   }
 
