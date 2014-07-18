@@ -19,6 +19,12 @@ class Coffee.AppHelper
       if (e.keyCode == 13)
         name = $('#nameInput').val()
         text = $('#messageInput').val()
+
+        if name.length == 0
+          name = 'anonymous'
+        if text.length == 0
+          text = 'silence'
+
         @dataRef.push({name: name, text: text})
         $('#messageInput').val('')
     )
@@ -26,6 +32,9 @@ class Coffee.AppHelper
     @dataRef.on('child_added', (snapshot) =>
       message = snapshot.val()
       this.displayChatMessage(message.name, message.text)
+    )
+    @dataRef.on('child_removed', (oldChildSnapshot) =>
+      $('#messagesDiv').val('')
     )
 
   displayChatMessage: (name, text) =>
