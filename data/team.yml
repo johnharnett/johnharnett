@@ -47,3 +47,10 @@ drew:
   bio:
     - "Drew is on the support staff in the Philipines."
 
+david:
+  name: David Blunt
+  title: Public Relations
+  extra_image_style: "margin-top: 10px;"
+  bio:
+    - "David is on the support staff in the Philipines."
+
