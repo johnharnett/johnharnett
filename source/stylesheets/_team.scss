@@ -7,7 +7,8 @@
 
   @include breakpoint(mobile) {
     text-align: center;
-    top: -40px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   h1, h2 {
@@ -51,10 +52,15 @@
     padding: 20px;
 
     @include clearfix;
-    margin-top: 14px;
     margin-bottom: 24px;
 
-    h1, h2 {
+    // top margin
+    margin-top: 20px;
+    @include breakpoint(mobile) {
+      margin-top: 10px;
+    }
+
+      h1, h2 {
       text-align: left;
     }
 
