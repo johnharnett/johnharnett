@@ -88,7 +88,6 @@ configure :build do
 
   require 'ipsum'
 
-
   activate :favicon_maker, :icons => {
       "images/_favicon_template.png" => [
           { icon: "apple-touch-icon-152x152-precomposed.png" },
