@@ -11,9 +11,9 @@ require "rack/contrib/try_static"
 use Rack::Head
 # Attempt to serve static HTML files
 use Rack::TryStatic,
-    :root => "tmp",
-    :urls => %w[/],
-    :try => ['.html', 'index.html', '/index.html']
+    :root => "tmp",                                     # static files root dir
+    :urls => %w[/],                                     # match all requests
+    :try => ['.html', 'index.html', '/index.html']      # try these postfixes sequentially
 
 # Serve a 404 page if all else fails
 run lambda { |env|
