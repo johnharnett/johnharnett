@@ -3,6 +3,7 @@
 source 'http://rubygems.org'
 
 gem "middleman"
+gem 'eventmachine',github: "eventmachine/eventmachine"
 
 # Live-reloading plugin
 gem "middleman-livereload"
