@@ -1,4 +1,4 @@
-#team {
+#musicians {
   margin: 0 auto;
   max-width: 1000px;
   padding-left: 20px;
@@ -44,7 +44,7 @@
     }
   }
 
-  .team-member {
+  .musicians-member {
     background-color: rgba(255, 255, 255, 1);
     @include box-shadow($logoShadow);
 
@@ -129,7 +129,7 @@
       }
     }
 
-    .team-member-image {
+    .musicians-member-image {
       width: 375px;
       height: 375px;
       box-shadow: 1px 2px 5px;

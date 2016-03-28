@@ -1,12 +1,12 @@
 
-<div id="team-page" class=<%= class_name %>>
+<div id="musicians-page" class=<%= class_name %>>
 
-  <div id="team">
+  <div id="musicians">
 
     <% data.team.each do |short_name, person| %>
-        <div class="team-member">
+        <div class="musicians-member">
           <div
-          class="team-member-image <%= cycle("right", "left") %>"
+          class="musicians-member-image <%= cycle("right", "left") %>"
           <% if person.extra_image_style.present? %>
           style="<%= person.extra_image_style %>"
           <% end %>

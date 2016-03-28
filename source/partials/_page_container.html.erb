@@ -1,5 +1,4 @@
- <%
-    $display_page = 'main'
+ <% $display_page = 'main'
 
     if defined?($savedPageName)
       $display_page = $savedPageName
@@ -16,7 +15,7 @@
 
 <div id="page-container">
   <%= partial "pages/main", {locals: {class_name: page_class('main')}} %>
-  <%= partial "pages/team", {locals: {class_name: page_class('team')}} %>
+  <%= partial "pages/musicians", {locals: {class_name: page_class('musicians')}} %>
   <%= partial "pages/contact", {locals: {class_name: page_class('contact')}} %>
   <%= partial "pages/portfolio", {locals: {class_name: page_class('portfolio')}} %>
   <%= partial "pages/jobs", {locals: {class_name: page_class('jobs')}} %>
