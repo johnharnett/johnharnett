@@ -15,21 +15,26 @@
 #    the original line.
 #
 
-steve:
-  name: Steve Gehrman
-  title: Founder
-  facebook: steve.gehrman
-  linkedin: sgehrman
-  twitter: sgehrman
-  github: sgehrman
+charlotte:
+  name: Charlotte Maclet
+  title: Violinist
+  facebook: charlotte.maclet
   extra_image_style: "margin-top: 10px;"
   bio:
-    - "Steve resides in San Francisco."
+    - "Charlotte ....."
 
-dragan:
-  name: Dragan Milic
+felix:
+  name: Felix
+  title: Viola
+  extra_image_style: "margin-top: 10px;"
+  bio:
+    - "Felix ...."
+
+catrin:
+  name: Catrin Smith
   title: Engineering
   extra_image_style: "margin-top: 10px;"
   bio:
-    - "Dragan resides in the Netherlands."
+    - "Catrix......"
+
 

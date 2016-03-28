@@ -25,12 +25,14 @@ p.max {
 }
 
 #header-image {
-  position: relative;
-  background: url("../images/spacestation.jpg") no-repeat;
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 400px;
+//  position: relative;
+  background: url("../images/brodowski.svg") no-repeat;
+   
+  height: 28.75em;
+// background-size: cover;
+ background-position: center;
+ width: 100%;
+//  height: 400px;
   margin-bottom: 40px;
   border: 1px solid rgba(255,255,255,.1f);
 }

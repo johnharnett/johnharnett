@@ -4,7 +4,7 @@ class Coffee.AppHelper
     $(".page-visible")
       .transition({opacity: 1, top: 0, duration: 300, easing: 'ease'})
 
-    @dataRef = new Firebase('https://dazzling-fire-7387.firebaseio.com/')
+    @dataRef = new Firebase('')
 
     $("#remove-line-button").click =>
       removeComplete= (error) =>
